@@ -4,7 +4,7 @@ FROM golang:1.16 as builder
 WORKDIR /workdir
 ENV GO111MODULE="on"
 ## download packages
-COPY go.mod go.sum ./
+COPY go.mod ./
 RUN go mod download
 ## build
 COPY . ./
